@@ -1,0 +1,13 @@
+{
+  "name": "jeyroik/extas-templates",
+  "description": "Extas template package",
+  "require": {
+    "jeyroik/extas-foundation": "*",
+    "jeyroik/extas-base": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "extas\\": "src/"
+    }
+  }
+}
