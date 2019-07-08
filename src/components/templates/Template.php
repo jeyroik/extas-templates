@@ -3,7 +3,7 @@ namespace extas\components\templates;
 
 use extas\components\THasDescription;
 use extas\components\THasName;
-use extas\components\THasOwner;
+use extas\components\players\THasOwner;
 use extas\interfaces\templates\ITemplate;
 use extas\components\Item;
 

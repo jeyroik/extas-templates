@@ -3,7 +3,7 @@ namespace extas\interfaces\templates;
 
 use extas\interfaces\IHasDescription;
 use extas\interfaces\IHasName;
-use extas\interfaces\IHasOwner;
+use extas\interfaces\players\IHasOwner;
 use extas\interfaces\IItem;
 
 /**
