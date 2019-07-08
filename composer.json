@@ -3,7 +3,8 @@
   "description": "Extas template package",
   "require": {
     "jeyroik/extas-foundation": "*",
-    "jeyroik/extas-base": "*"
+    "jeyroik/extas-base": "*",
+    "jeyroik/extas-players": "*"
   },
   "autoload": {
     "psr-4": {
