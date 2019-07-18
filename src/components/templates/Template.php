@@ -1,6 +1,7 @@
 <?php
 namespace extas\components\templates;
 
+use extas\components\parameters\THasParameters;
 use extas\components\THasDescription;
 use extas\components\THasName;
 use extas\components\players\THasOwner;
@@ -18,6 +19,7 @@ class Template extends Item implements ITemplate
     use THasOwner;
     use THasDescription;
     use THasName;
+    use THasParameters;
 
     /**
      * @return string

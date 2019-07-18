@@ -3,6 +3,7 @@ namespace extas\interfaces\templates;
 
 use extas\interfaces\IHasDescription;
 use extas\interfaces\IHasName;
+use extas\interfaces\parameters\IHasParameters;
 use extas\interfaces\players\IHasOwner;
 use extas\interfaces\IItem;
 
@@ -16,6 +17,6 @@ use extas\interfaces\IItem;
  * @package extas\interfaces\templates
  * @author jeyroik@gmail.com
  */
-interface ITemplate extends IItem, IHasDescription, IHasOwner, IHasName
+interface ITemplate extends IItem, IHasDescription, IHasOwner, IHasName, IHasParameters
 {
 }
