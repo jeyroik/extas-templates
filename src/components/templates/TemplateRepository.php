@@ -12,9 +12,9 @@ use extas\interfaces\templates\ITemplateRepository;
  */
 class TemplateRepository extends Repository implements ITemplateRepository
 {
-    protected $name = 'templates';
-    protected $pk = Template::FIELD__NAME;
-    protected $scope = 'extas';
-    protected $itemClass = Template::class;
-    protected $idAs = '';
+    protected string $name = 'templates';
+    protected string $pk = Template::FIELD__NAME;
+    protected string $scope = 'extas';
+    protected string $itemClass = Template::class;
+    protected string $idAs = '';
 }

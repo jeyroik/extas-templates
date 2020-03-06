@@ -11,7 +11,7 @@ use extas\interfaces\parameters\IHasParameters;
  */
 interface IHasTemplateParameters
 {
-    const FIELD__PARAMETERS = IHasParameters::FIELD__PARAMETERS;
+    public const FIELD__PARAMETERS = IHasParameters::FIELD__PARAMETERS;
 
     /**
      * @param bool $asArray return  ITemplateParameter[] if false, return array of arrays otherwise

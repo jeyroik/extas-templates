@@ -11,7 +11,7 @@ use extas\interfaces\repositories\IRepository;
  */
 interface IHasTemplate
 {
-    const FIELD__TEMPLATE = 'template';
+    public const FIELD__TEMPLATE = 'template';
 
     /**
      * @return ITemplate|null
