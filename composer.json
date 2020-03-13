@@ -2,9 +2,9 @@
   "name": "jeyroik/extas-templates",
   "description": "Extas template package",
   "require": {
-    "jeyroik/extas-foundation": "*",
-    "jeyroik/extas-base": "*",
-    "jeyroik/extas-players": "*"
+    "jeyroik/extas-foundation": "2.*",
+    "jeyroik/extas-base": "1.*",
+    "jeyroik/extas-players": "1.*"
   },
   "autoload": {
     "psr-4": {
