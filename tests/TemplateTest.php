@@ -34,7 +34,12 @@ class TemplateTest extends TestCase
         $env = \Dotenv\Dotenv::create(getcwd() . '/tests/');
         $env->load();
         $this->templateRepo = new TemplateRepository();
-        $this->pluginRepo = new PluginRepository();
+        $this->pluginRepo = new class extends PluginRepository {
+            public function reload()
+            {
+                parent::$stagesWithPlugins = [];
+            }
+        };
 
         SystemContainer::addItem(ITemplateRepository::class, TemplateRepository::class);
     }
@@ -125,6 +130,7 @@ class TemplateTest extends TestCase
             Plugin::FIELD__CLASS => PluginParameterTitle::class,
             Plugin::FIELD__STAGE => 'test.' . IStageTemplateParameterGet::NAME__SUFFIX
         ]));
+        $this->pluginRepo->reload();
 
         $paramsAsObjects = $hasTParameters->getParameters();
         foreach ($paramsAsObjects as $parameter) {
