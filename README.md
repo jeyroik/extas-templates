@@ -1,6 +1,7 @@
 ![tests](https://github.com/jeyroik/extas-templates/workflows/PHP%20Composer/badge.svg?branch=master&event=push)
 ![codecov.io](https://codecov.io/gh/jeyroik/extas-templates/coverage.svg?branch=master)
-<a href="https://github.com/phpstan/phpstan"><img src="https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat" alt="PHPStan Enabled"></a>
+<a href="https://github.com/phpstan/phpstan"><img src="https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat" alt="PHPStan Enabled"></a> 
+<a href="https://codeclimate.com/github/jeyroik/extas-templates/maintainability"><img src="https://api.codeclimate.com/v1/badges/2d0f94b2ae161e58bc50/maintainability" /></a>
 
 # DEPRECATED
 
