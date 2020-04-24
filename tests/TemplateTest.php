@@ -11,6 +11,7 @@ use extas\components\templates\Template;
 use extas\components\templates\TemplateRepository;
 use extas\components\templates\THasTemplate;
 use extas\interfaces\repositories\IRepository;
+use extas\interfaces\stages\IStageTemplateParameterGet;
 use extas\interfaces\templates\IHasTemplate;
 use extas\interfaces\templates\ITemplateRepository;
 use extas\interfaces\templates\parameters\IHasTemplateParameters;
@@ -41,6 +42,7 @@ class TemplateTest extends TestCase
     public function tearDown(): void
     {
         $this->templateRepo->delete([Template::FIELD__NAME => 'test_template']);
+        $this->pluginRepo->delete([Plugin::FIELD__CLASS => PluginParameterTitle::class]);
     }
 
     public function testHasTemplate()
@@ -121,7 +123,7 @@ class TemplateTest extends TestCase
 
         $this->pluginRepo->create(new Plugin([
             Plugin::FIELD__CLASS => PluginParameterTitle::class,
-            Plugin::FIELD__STAGE => 'test.parameter'
+            Plugin::FIELD__STAGE => 'test.' . IStageTemplateParameterGet::NAME__SUFFIX
         ]));
 
         $paramsAsObjects = $hasTParameters->getParameters();

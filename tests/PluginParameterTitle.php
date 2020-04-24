@@ -15,6 +15,6 @@ class PluginParameterTitle extends Plugin implements IStageTemplateParameterGet
 {
     public function __invoke(ITemplateParameter &$parameter): void
     {
-        $parameter->setTitle('New title');
+        $parameter = $parameter->setTitle('New title');
     }
 }
