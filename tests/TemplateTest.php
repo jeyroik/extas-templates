@@ -30,6 +30,8 @@ class TemplateTest extends TestCase
         $env = \Dotenv\Dotenv::create(getcwd() . '/tests/');
         $env->load();
         $this->templateRepo = new TemplateRepository();
+
+        SystemContainer::addItem(ITemplateRepository::class, TemplateRepository::class);
     }
 
     public function tearDown(): void
