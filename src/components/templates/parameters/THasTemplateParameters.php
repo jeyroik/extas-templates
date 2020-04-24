@@ -1,6 +1,7 @@
 <?php
 namespace extas\components\templates\parameters;
 
+use extas\interfaces\stages\IStageTemplateParameterGet;
 use extas\interfaces\templates\parameters\IHasTemplateParameters;
 use extas\interfaces\templates\parameters\ITemplateParameter;
 
@@ -29,7 +30,9 @@ trait THasTemplateParameters
             $items = [];
             foreach ($parameters as $parameterData) {
                 $parameter = new  TemplateParameter($parameterData);
-                foreach ($this->getPluginsByStage($this->getSubjectForExtension() . '.parameter') as $plugin) {
+                $subject = $this->getSubjectForExtension();
+                $suffix = IStageTemplateParameterGet::NAME__SUFFIX;
+                foreach ($this->getPluginsByStage($subject . '.' . $suffix) as $plugin) {
                     $plugin($parameter);
                 }
                 $items[] = $parameter;

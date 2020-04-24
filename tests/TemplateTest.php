@@ -2,6 +2,8 @@
 namespace tests;
 
 use extas\components\Item;
+use extas\components\plugins\Plugin;
+use extas\components\plugins\PluginRepository;
 use extas\components\SystemContainer;
 use extas\components\templates\parameters\TemplateParameter;
 use extas\components\templates\parameters\THasTemplateParameters;
@@ -23,6 +25,7 @@ use PHPUnit\Framework\TestCase;
 class TemplateTest extends TestCase
 {
     protected ?IRepository $templateRepo = null;
+    protected ?IRepository $pluginRepo = null;
 
     protected function setUp(): void
     {
@@ -30,6 +33,7 @@ class TemplateTest extends TestCase
         $env = \Dotenv\Dotenv::create(getcwd() . '/tests/');
         $env->load();
         $this->templateRepo = new TemplateRepository();
+        $this->pluginRepo = new PluginRepository();
 
         SystemContainer::addItem(ITemplateRepository::class, TemplateRepository::class);
     }
@@ -114,5 +118,15 @@ class TemplateTest extends TestCase
             ],
             $hasTParameters->getParameter('test', [], true)
         );
+
+        $this->pluginRepo->create(new Plugin([
+            Plugin::FIELD__CLASS => PluginParameterTitle::class,
+            Plugin::FIELD__STAGE => 'test.parameter'
+        ]));
+
+        $paramsAsObjects = $hasTParameters->getParameters();
+        foreach ($paramsAsObjects as $parameter) {
+            $this->assertEquals('New title', $parameter->getTitle());
+        }
     }
 }
