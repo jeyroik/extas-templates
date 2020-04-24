@@ -1,4 +1,12 @@
-# extas-templates
+![tests](https://github.com/jeyroik/extas-templates/workflows/PHP%20Composer/badge.svg?branch=master&event=push)
+![codecov.io](https://codecov.io/gh/jeyroik/extas-templates/coverage.svg?branch=master)
+<a href="https://github.com/phpstan/phpstan"><img src="https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat" alt="PHPStan Enabled"></a>
+
+# DEPRECATED
+
+Пакет считается устаревшим. Предпочтительнее использовать [extas-samples](https://github.com/jeyroik/extas-samples "Extas samples").
+
+# Описание
 
 Пакет с extas-совместимой сущностью "Шаблон".
 
