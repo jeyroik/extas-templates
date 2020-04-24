@@ -3,7 +3,7 @@ namespace extas\interfaces\templates;
 
 use extas\interfaces\IHasDescription;
 use extas\interfaces\IHasName;
-use extas\interfaces\players\IHasOwner;
+use extas\interfaces\players\IHasPlayer;
 use extas\interfaces\IItem;
 use extas\interfaces\templates\parameters\IHasTemplateParameters;
 
@@ -17,6 +17,6 @@ use extas\interfaces\templates\parameters\IHasTemplateParameters;
  * @package extas\interfaces\templates
  * @author jeyroik@gmail.com
  */
-interface ITemplate extends IItem, IHasDescription, IHasOwner, IHasName, IHasTemplateParameters
+interface ITemplate extends IItem, IHasDescription, IHasPlayer, IHasName, IHasTemplateParameters
 {
 }

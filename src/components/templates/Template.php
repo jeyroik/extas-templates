@@ -4,7 +4,7 @@ namespace extas\components\templates;
 use extas\components\templates\parameters\THasTemplateParameters;
 use extas\components\THasDescription;
 use extas\components\THasName;
-use extas\components\players\THasOwner;
+use extas\components\players\THasPlayer;
 use extas\interfaces\templates\ITemplate;
 use extas\components\Item;
 
@@ -16,7 +16,7 @@ use extas\components\Item;
  */
 class Template extends Item implements ITemplate
 {
-    use THasOwner;
+    use THasPlayer;
     use THasDescription;
     use THasName;
     use THasTemplateParameters;
